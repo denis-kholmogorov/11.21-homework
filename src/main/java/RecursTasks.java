@@ -2,60 +2,83 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
 import java.util.ArrayList;
 import java.util.concurrent.RecursiveTask;
 
-public class RecursTasks extends RecursiveTask<String> {
-
+public class RecursTasks extends RecursiveTask<StringBuilder>
+{
     private final String root;
-    private final int maxBodySize = 20480000;
-    ArrayList<String> list = new ArrayList<>();
+    private ArrayList<String> list = new ArrayList<>();
+    private StringBuilder urls = new StringBuilder();
+    private int count;
+    private boolean recordNestedData;
+    private Document doc;
+    private StringBuilder tab = new StringBuilder();
 
-    public RecursTasks(String root) {
+
+    public RecursTasks(String root, int count, boolean recordNestedData)
+    {
         this.root = root;
+        this.count = count;
+        this.recordNestedData = recordNestedData;
     }
 
     @Override
-    protected String compute() {
+    protected StringBuilder compute()
+    {
+        count++;
 
-        String absUrl;
+        for (int i = 0; i <count; i++)
+        {
+            tab.append("\t");
+        }
 
-        Document doc = null;
         try
         {
             Thread.sleep(500);
-            doc = Jsoup.connect(root).maxBodySize(maxBodySize).get();
-        } catch (Exception e) {
+            doc = Jsoup.connect(root).get();
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
+
         Elements elements = doc.select("a[href^=https://skillbox.ru]");
 
 
+        for (Element element : elements)
+        {
+            String absoluteUrl = element.absUrl("href");
 
-        for (Element element : elements) {
-            absUrl = element.absUrl("href");
-            if(!list.contains(absUrl) && !absUrl.matches(".+.pdf$") && !absUrl.matches("https://skillbox.ru")){
-                System.out.println("Записываем в список" + absUrl);
-                list.add(absUrl);
-            }else{
-                System.out.println("также есть " + absUrl);
+            if(!list.contains(absoluteUrl) && !absoluteUrl.matches(".+.pdf$") && !absoluteUrl.matches("https://skillbox.ru"))
+            {
+                list.add(absoluteUrl);
+            }
+            else if(recordNestedData)
+            {
+                urls.append(tab + absoluteUrl + "\n");
                 continue;
             }
         }
-        if(!list.isEmpty()) {
-            System.out.println("Переходми в эту секцию");
-            for (String url : list) {
-                System.out.println("Запускаем поток " + url );
-                RecursiveTask task = new RecursTasks(url);
+
+        if(!list.isEmpty())
+        {
+            //"Переходми в эту секцию"
+            for (String url : list)
+            {
+                //"Запускаем поток ";
+                urls.append(tab + url + "\n");
+                RecursTasks task = new RecursTasks(url, count, recordNestedData);
                 task.fork();
-                task.join();
+                urls.append(task.join()); // ждем ответа и добавляем в stringBuilder
             }
-        }else{
-            System.out.println("Конец потока");
+        }
+        else
+        {
+            //"Конец потока"
             Thread.interrupted();
         }
 
-        return "0";
+        return urls;
     }
 }

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a22affc8-6877-4a18-8f9f-e357a5261089" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RecursTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RecursTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RecursTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RecursTasks.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,26 +88,26 @@
       <screen x="0" y="38" width="1680" height="1012" />
     </state>
     <state x="648" y="257" width="378" height="565" key="#com.intellij.ide.util.MemberChooser/0.38.1680.1012@0.38.1680.1012" timestamp="1577187906143" />
-    <state x="623" y="303" width="428" height="474" key="FileChooserDialogImpl" timestamp="1577176241135">
+    <state x="623" y="303" width="428" height="474" key="FileChooserDialogImpl" timestamp="1577265608198">
       <screen x="0" y="38" width="1680" height="1012" />
     </state>
-    <state x="623" y="303" width="428" height="474" key="FileChooserDialogImpl/0.38.1680.1012@0.38.1680.1012" timestamp="1577176241135" />
-    <state width="1634" height="209" key="GridCell.Tab.0.bottom" timestamp="1577263495431">
+    <state x="623" y="303" width="428" height="474" key="FileChooserDialogImpl/0.38.1680.1012@0.38.1680.1012" timestamp="1577265608198" />
+    <state width="1634" height="209" key="GridCell.Tab.0.bottom" timestamp="1577265615817">
       <screen x="0" y="38" width="1680" height="1012" />
     </state>
-    <state width="1634" height="209" key="GridCell.Tab.0.bottom/0.38.1680.1012@0.38.1680.1012" timestamp="1577263495431" />
-    <state width="1634" height="209" key="GridCell.Tab.0.center" timestamp="1577263495431">
+    <state width="1634" height="209" key="GridCell.Tab.0.bottom/0.38.1680.1012@0.38.1680.1012" timestamp="1577265615817" />
+    <state width="1634" height="209" key="GridCell.Tab.0.center" timestamp="1577265615816">
       <screen x="0" y="38" width="1680" height="1012" />
     </state>
-    <state width="1634" height="209" key="GridCell.Tab.0.center/0.38.1680.1012@0.38.1680.1012" timestamp="1577263495431" />
-    <state width="1634" height="209" key="GridCell.Tab.0.left" timestamp="1577263495431">
+    <state width="1634" height="209" key="GridCell.Tab.0.center/0.38.1680.1012@0.38.1680.1012" timestamp="1577265615816" />
+    <state width="1634" height="209" key="GridCell.Tab.0.left" timestamp="1577265615816">
       <screen x="0" y="38" width="1680" height="1012" />
     </state>
-    <state width="1634" height="209" key="GridCell.Tab.0.left/0.38.1680.1012@0.38.1680.1012" timestamp="1577263495431" />
-    <state width="1634" height="209" key="GridCell.Tab.0.right" timestamp="1577263495431">
+    <state width="1634" height="209" key="GridCell.Tab.0.left/0.38.1680.1012@0.38.1680.1012" timestamp="1577265615816" />
+    <state width="1634" height="209" key="GridCell.Tab.0.right" timestamp="1577265615817">
       <screen x="0" y="38" width="1680" height="1012" />
     </state>
-    <state width="1634" height="209" key="GridCell.Tab.0.right/0.38.1680.1012@0.38.1680.1012" timestamp="1577263495431" />
+    <state width="1634" height="209" key="GridCell.Tab.0.right/0.38.1680.1012@0.38.1680.1012" timestamp="1577265615817" />
     <state x="533" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1577256441345">
       <screen x="0" y="38" width="1680" height="1012" />
     </state>
@@ -121,6 +116,10 @@
       <screen x="0" y="38" width="1680" height="1012" />
     </state>
     <state x="614" y="250" width="446" height="579" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.38.1680.1012@0.38.1680.1012" timestamp="1577108846810" />
+    <state x="215" y="243" width="1243" height="594" key="new project wizard" timestamp="1577265613240">
+      <screen x="0" y="38" width="1680" height="1012" />
+    </state>
+    <state x="215" y="243" width="1243" height="594" key="new project wizard/0.38.1680.1012@0.38.1680.1012" timestamp="1577265613240" />
     <state x="585" y="165" width="504" height="749" key="refactoring.ChangeSignatureDialog" timestamp="1577188522358">
       <screen x="0" y="38" width="1680" height="1012" />
     </state>

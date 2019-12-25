@@ -70,7 +70,11 @@ public class RecursTasks extends RecursiveTask<StringBuilder>
                 urls.append(tab + url + "\n");
                 RecursTasks task = new RecursTasks(url, count, recordNestedData);
                 task.fork();
+                /*Появляется узкое место в коде, я пробывал создать отдельный список задач,
+                * добавлять в них task и после выхода из цикла созадть новый и запустить task.join()
+                * но тогда в строке в которую мы пишем, все добвавляется по очереди */
                 urls.append(task.join()); // ждем ответа и добавляем в stringBuilder
+
             }
         }
         else

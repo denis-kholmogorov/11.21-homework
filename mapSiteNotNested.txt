@@ -1,5 +1,15 @@
 https://skillbox.ru/
 	https://skillbox.ru/media/
+	https://skillbox.ru/marketolog/
+	https://skillbox.ru/course/webdesign/
+	https://skillbox.ru/course/smm/
+	https://skillbox.ru/course/graphic-design/
+	https://skillbox.ru/targetolog/
+	https://skillbox.ru/instagram/
+	https://skillbox.ru/course/aic/
+	https://skillbox.ru/course/java/
+	https://skillbox.ru/course/app-design-pro/
+	https://skillbox.ru/course/sketching/
 		https://skillbox.ru/course/profession-test/
 		https://skillbox.ru/course/profession-machine-learning/
 		https://skillbox.ru/course/profession-unreal-engine-4/
@@ -66,13 +76,3 @@ https://skillbox.ru/
 		https://skillbox.ru/course/itproject/
 		https://skillbox.ru/course/powerpoint-gslides/
 		https://skillbox.ru/course/msoffice/
-	https://skillbox.ru/marketolog/
-	https://skillbox.ru/course/webdesign/
-	https://skillbox.ru/course/smm/
-	https://skillbox.ru/course/graphic-design/
-	https://skillbox.ru/targetolog/
-	https://skillbox.ru/instagram/
-	https://skillbox.ru/course/aic/
-	https://skillbox.ru/course/java/
-	https://skillbox.ru/course/app-design-pro/
-	https://skillbox.ru/course/sketching/

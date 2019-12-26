@@ -3,6 +3,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.RecursiveTask;
 
 public class RecursTasks extends RecursiveTask<StringBuilder>
@@ -61,6 +62,8 @@ public class RecursTasks extends RecursiveTask<StringBuilder>
             }
         }
 
+        List<RecursTasks> recursTasksList = new ArrayList<>();
+
         if(!list.isEmpty())
         {
             //"Переходми в эту секцию"
@@ -73,14 +76,19 @@ public class RecursTasks extends RecursiveTask<StringBuilder>
                 /*Появляется узкое место в коде, я пробывал создать отдельный список задач,
                 * добавлять в них task и после выхода из цикла созадть новый и запустить task.join()
                 * но тогда в строке в которую мы пишем, все добвавляется по очереди */
-                urls.append(task.join()); // ждем ответа и добавляем в stringBuilder
 
+                recursTasksList.add(task); // добавляю задачи в список запущенных задач.
             }
         }
         else
         {
             //"Конец потока"
             Thread.interrupted();
+        }
+
+        //Ниже перебираю список и получаю строки и добавляю в StringBuilder
+        for(RecursTasks task: recursTasksList){
+            urls.append(task.join());
         }
 
         return urls;
